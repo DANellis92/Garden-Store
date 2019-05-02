@@ -10,6 +10,7 @@ import { AuthComponent } from './auth/auth.component';
 import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
+import { AdminproductsComponent } from './adminproducts/adminproducts.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductsComponent } from './products/products.component';
     AuthComponent,
     NavComponent,
     AboutComponent,
-    ProductsComponent
+    ProductsComponent,
+    AdminproductsComponent
   ],
   imports: [
     BrowserModule,
