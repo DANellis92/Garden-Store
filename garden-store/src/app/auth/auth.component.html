@@ -1,3 +1,22 @@
-<p>
-  auth works!
-</p>
+<div class="authContainer">
+    <div class="authForm"*ngIf="isUser === ''; else isAUser">
+        <form [formGroup]="loginForm" (ngSubmit)="onSignIn()">
+          <label for="email">Email</label>
+          <input formControlName="email" type="text" name="email" required />
+          <label for="password">Password</label>
+          <input
+            formControlName="password"
+            type="password"
+            name="password"
+            required
+          />
+          <button type="submit">Enter</button>
+        </form>
+    </div>
+    <div>
+        <ng-template #isAUser>
+          <app-adminproducts [token]="token"></app-adminproducts>
+        </ng-template>
+    </div>
+</div>
+

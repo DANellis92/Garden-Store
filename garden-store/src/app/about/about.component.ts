@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-about',
@@ -7,9 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  messageForm: FormGroup;
+  submitted = false;
+  success = false;
+
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.messageForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      message: ['', Validators.required]
+
+    });
   }
+
+onSubmit() {
+  this.submitted = true;
+
+  if (this.messageForm.invalid) {
+    return;
+  }
+    this.success = true;
+    //where you put logic for sending email?
+}
 
 }

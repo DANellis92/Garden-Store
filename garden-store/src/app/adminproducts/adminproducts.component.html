@@ -1,0 +1,10 @@
+<ul *ngIf="adminProducts">
+  <li *ngFor="let adminProduct of adminProducts">
+    <img [src]="adminProduct.product_image" />
+    <p class="name">{{ adminProduct.product_name }}</p>
+    <p class="price">${{ adminProduct.product_price }}</p>
+    <button class="btn" (click)="itsLit(adminProduct.id)">DELETE</button>
+    <p></p>
+    <p class="description">{{ adminProduct.product_description }}</p>
+  </li>
+</ul>

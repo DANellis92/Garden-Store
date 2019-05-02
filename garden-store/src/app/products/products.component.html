@@ -1,2 +1,15 @@
-<h1> Our Products!</h1>
+<div class="prodsContainer">
+        <ul *ngIf="products">
+                <li *ngFor="let product of products">
+                    <img [src]="product.product_image">
+                    <p class="name">{{ product.product_name }}</p>
+                    <p class="price">${{ product.product_price }}</p>
+                    <p></p>
+                    <p></p>
+                    <p class="description">{{ product.product_description }}</p>
+                </li>
+        </ul>
+</div>
+
+
 
