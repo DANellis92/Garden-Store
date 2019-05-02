@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { AdminService } from "../user.service";
@@ -11,7 +11,8 @@ import { AdminService } from "../user.service";
 export class AuthComponent implements OnInit {
   loginForm: FormGroup;
   submitted = false;
-  token = "";
+  isUser = "";
+  @Input("token") token: string;
 
   constructor(private fb: FormBuilder, private dbAdmin: AdminService) {}
 
@@ -25,6 +26,13 @@ export class AuthComponent implements OnInit {
     this.submitted = true;
     this.dbAdmin
       .login(this.loginForm.value)
-      .subscribe(res => (this.token = res.token));
+      .subscribe(
+        res => (
+          (this.isUser = res.isUser),
+          (this.token = res.token),
+          console.log(this.token),
+          localStorage.setItem("isUser", this.isUser)
+        )
+      );
   }
 }

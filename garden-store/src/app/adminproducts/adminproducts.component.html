@@ -3,7 +3,7 @@
     <img [src]="adminProduct.product_image" />
     <p class="name">{{ adminProduct.product_name }}</p>
     <p class="price">${{ adminProduct.product_price }}</p>
-    <button>DELETE</button>
+    <button class="btn" (click)="itsLit(adminProduct.id)">DELETE</button>
     <p></p>
     <p class="description">{{ adminProduct.product_description }}</p>
   </li>

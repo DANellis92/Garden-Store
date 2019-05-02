@@ -1,4 +1,4 @@
-<div *ngIf="token === ''; else token">
+<div *ngIf="isUser === ''; else isAUser">
   <form [formGroup]="loginForm" (ngSubmit)="onSignIn()">
     <label for="email">Email</label>
     <input formControlName="email" type="text" name="email" required />
@@ -12,4 +12,8 @@
     <button type="submit">Enter</button>
   </form>
 </div>
-<ng-template #token> <app-adminproducts></app-adminproducts> </ng-template>
+<div>
+  <ng-template #isAUser>
+    <app-adminproducts [token]="token"></app-adminproducts>
+  </ng-template>
+</div>
