@@ -1,21 +1,33 @@
-h2  {
-        text-align: center;
-    }
-
-
-img {
-    width: 100%;
+.homeContainer {
+    width: 80%;
+    margin-top: 3em;
+    margin-left: 10%;
+    margin-right: 10%;
     height: 100%;
-    
-    
 }
-#description {
-    background-color: purple;
-    margin-left: 0;
-    margin-right: 0;
-   
+
+.imgWrapper {
+    width: 50%;
+    position: relative;
+    float: left;
 }
-#big {
+
+.homeImg {
     width: 100%;
+
 }
+
+.pWrapper {
+    width: 48%;
+    position: relative;
+    float: left;
+    margin-left: 2%;
+}
+
+.blurb {
+    padding-top: 7em;
+    font-family: 'Montserrat';
+    font-size: 20px;
+}
+
 

@@ -1,8 +1,9 @@
 header {
-    background: #7700FF;
+    border-bottom: 1px solid black;
 
     .logo {
         font-weight: bold;
+        color: #78e875;
     }
 
     nav {
@@ -19,9 +20,10 @@ header {
                     padding: 1.5em;
                     text-transform: uppercase;
                     font-size: .8em;
+                    color: black;
 
                     &:hover {
-                        background: #8E2BFF;
+                        color: #78e875;
                     }
                 }
             }
