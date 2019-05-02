@@ -1,42 +1,42 @@
-<h1> Company Name</h1>
-<h3> Company cheesy slogan</h3>
-
-<p> Lorem ipsum dolor amet post-ironic locavore occupy cloud bread actually. Craft beer helvetica freegan activated charcoal. Pabst chambray biodiesel meh ramps la croix. Chartreuse retro hell of, gastropub typewriter gluten-free yuccie. Banjo pitchfork meh try-hard, venmo normcore trust fund gochujang lo-fi vape enamel pin yuccie copper mug.  </p>
-
-<h1>Contact us</h1>
-
-
- 
-<div id="form">
-<form  ngNoForm  action="https://formspree.io/aaronwebster88@gmail.com" method="POST">
-
-    <h5 *ngIf="success">Your form is valid!</h5>
-
-    <label id="dumb2">
-        Name:
-        <input type="text" formControlName="name" name="name">
-        <!-- <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
-                <div *ngIf="messageForm.controls.name.errors.required">Your name is required</div>
-            </div> -->
-    </label>
-
-    <label id="dumb1">
-            Email:
-            <input type="email" formControlName="email" name="_replyto">
-            <!-- <div *ngIf="submitted && messageForm.controls.email.errors" class="error">
-                    <div *ngIf="messageForm.controls.email.errors.required">Your email is required</div>
-                </div> -->
-        </label>
-
-    <label id="message">
-        Message:
-        <textarea formControlName="message" name="message"></textarea>
-        <!-- <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
-                <div *ngIf="messageForm.controls.message.errors.required">A message is required</div>
-                </div> -->
-        </label>
-
-        <input id="button" type="submit" value="Send" class="cta">
-
-</form>
+<div class="formContainer">
+        <h1 class="formHeader"> Buds R Us</h1>
+        <p> Lorem ipsum dolor amet post-ironic locavore occupy cloud bread actually. Craft beer helvetica freegan activated charcoal. Pabst chambray biodiesel meh ramps la croix. Chartreuse retro hell of, gastropub typewriter gluten-free yuccie. Banjo pitchfork meh try-hard, venmo normcore trust fund gochujang lo-fi vape enamel pin yuccie copper mug.  </p>
+                
+        <h1 class="formHeader">Contact us</h1>
+                
+                
+                 
+        <div class="formWrapper">
+                <form  ngNoForm  action="https://formspree.io/aaronwebster88@gmail.com" method="POST">
+                
+                    <h5 *ngIf="success">Your form is valid!</h5>
+                    <label class="FormName">
+                        <p class="pFormLabel">Name</p>
+                        <input class="nameInput" type="text" formControlName="name" name="name">
+                        <!-- <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+                                <div *ngIf="messageForm.controls.name.errors.required">Your name is required</div>
+                            </div> -->
+                    </label>
+                
+                    <label class="FormEmail">
+                        <p class="pFormLabel">Email</p>
+                            <input class="emailInput" type="email" formControlName="email" name="_replyto">
+                            <!-- <div *ngIf="submitted && messageForm.controls.email.errors" class="error">
+                                    <div *ngIf="messageForm.controls.email.errors.required">Your email is required</div>
+                                </div> -->
+                        </label>
+                
+                    <label class="FormMessage">
+                        <p class="pFormLabel">Message</p>
+                        <textarea class="textArea" formControlName="message" name="message"></textarea>
+                        <!-- <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+                                <div *ngIf="messageForm.controls.message.errors.required">A message is required</div>
+                                </div> -->
+                        </label>
+                
+                        <input class="SubBtn" type="submit" value="Send" class="cta">
+                
+                </form>
+        </div>
 </div>
+
