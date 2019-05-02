@@ -1,14 +1,15 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class DataService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getProducts() {
-    return this.http.get('https://efa-gardenapp-backend.herokuapp.com/api/product')
+    return this.http.get(
+      "https://efa-gardenapp-backend.herokuapp.com/api/product"
+    );
   }
 }
